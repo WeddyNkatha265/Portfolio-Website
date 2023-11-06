@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f2d086de1d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+    <nav>
+        <img src="images/wedy logo.jpg" class="logo">
+        <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-time" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div class="header-text">
+        <p>UI/UX Designer</p>
+        <h1>HI, I'm <span>Weddy</span><br> Nkatha from Kenya</h1>
+    </div>
+    </div>
+</div>
+<!----------about---------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user1.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am Weddy Nkatha, a highly creative web developer with a Bachelor of Science in Mathematics and Computer science from Kirinyaga University.Experienced Web Developer adept in all stages of advanced web development. Knowledgeable in user interface, testing, and debugging processes. Bringing forth expertise in design, installation, testing and maintenance of web systems. Equipped with a diverse and promising skill-set. Proficient in an assortment of technologies, including Java, R,PowerBi C#, Python, Cloud, and Microsoft SQL Server. Able to effectively self-manage during independent projects, as well as collaborate in a team setting.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                <ul>
+                       <li><span>UI/UX</span><br> Designing Web/App Interfaces</li>
+                       <li><span>Web Development</span><br>Web App Development</li>
+                       <li><span>App Development</span><br>Building Android/iOS apps</li>
+                   </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                           <li><span>2023 - Current</span><br> UI/UX Design Training at online bootcamps.</li>
+                           <li><span>2023-2023</span><br>Data Science bootcamps.</li>
+                           <li><span>2022-2023</span><br>Network and System Administrator Internships.</li>
+                           <li><span>2022-2023</span><br>Full stack software developer</li>
+                       </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                               <li><span>2019-2023</span><br> Bachelor of Science in Mathematics and Computer Science from Kirinyaga University</li>
+                               <li><span>2023</span><br>Full stack software developer from IBM</li>
+                               <li><span>2022</span><br>Data Science from Arewa data camp and LUX Dev Academy</li>
+                           </ul>
+                        </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------------services----------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Design programs to create visual elements. Website designers usually have expertise in UI, or user interface, which means they strategically design a site that's intuitive and easy for visitors to navigate.</p>
+               <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fas fa-crop-alt"></i>
+                <h2>UI/UX Design</h2>
+                <p>Client-focused, creating user and customer experiences designed to have engaging user interfaces (UI) and deliver tangible business results </p>
+               <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fab fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>Be it app UI design, improving user experience, or it is about revamping your existing mobile app</p>
+               <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------portfolio------------>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>The app connects you to the talented people around the world.Download it from play store</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Music App</h3>
+                    <p>The app connects you to the talented people around the world.Download it from play store</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Online Shopping App</h3>
+                    <p>The app connects you to the talented people around the world.Download it from play store</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!--------------contact---------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact me</h1>
+                <p><i class="fas fa-paper-plane"></i>weddynkatha265@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>0729276470</p>
+                 <div class="social-icons">
+                 <a href=""><i class="fab fa-facebook"></i></a>
+                 <a href=""><i class="fab fa-twitter-square"></i></a>
+                 <a href=""><i class="fab fa-instagram"></i></a>
+                 <a href="https://www.linkedin.com/in/weddy-nkatha-193614246/"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+            <form>
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+            </form>
+        </div>
+     </div>
+   </div>
+   <div class="copyright">
+    <p>Copyright © Weddy. Made with <i class="fas fa-heart">by Easy Tutorials</i></p>
+   </div>
+</div>
+
+
+
+<script>
+
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for(tablink of tablinks){
+            tablink.classlist.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classlist.remove("active-tab");
+        }
+        event.currentTarget.classlist.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+ <script>
+
+       var sidemenu = document.getElementById("sidemenu");
+
+       function openmenu(){
+        sidemenu.style.right = "0";
+       }
+       function closemenu(){
+        sidemenu.style.right = "-200px";
+       }
+
+ </script>   
+
+</body>
+</html>
