@@ -51,7 +51,7 @@ nav ul li a::after{
     height: 3px;
     background: #ff004f;
     position: absolute;
-    left: o;
+    left: 0;
     bottom: -6px;
     transition: 0.5s;
 }
