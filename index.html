@@ -204,17 +204,26 @@
             <p><i class="fas fa-paper-plane"></i>weddynkatha265@gmail.com</p>
             <p><i class="fas fa-phone-square-alt"></i>0729276470</p>
             <div class="social-icons">
+              <a href="https://github.com/WeddyNkatha265" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
               <a href=""><i class="fab fa-facebook"></i></a>
               <a href=""><i class="fab fa-twitter-square"></i></a>
               <a href=""><i class="fab fa-instagram"></i></a>
-              <a href="https://www.linkedin.com/in/weddy-nkatha-193614246/"
+              <a
+                href="https://www.linkedin.com/in/weddy-nkatha-193614246/"
+                target="_blank"
                 ><i class="fab fa-linkedin"></i
               ></a>
             </div>
             <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
           </div>
           <div class="contact-right">
-            <form>
+            <form
+              action="https://formspree.io/f/xvgpoqpo"
+              method="POST"
+              onsubmit="return handleSubmit(event)"
+            >
               <input type="text" name="Name" placeholder="Your Name" required />
               <input
                 type="email"
@@ -226,9 +235,13 @@
                 name="Message"
                 rows="6"
                 placeholder="Your Message"
+                required
               ></textarea>
               <button type="submit" class="btn btn2">Submit</button>
             </form>
+            <p id="success-message" style="display: none">
+              Thank you! Your message has been sent.
+            </p>
           </div>
         </div>
       </div>
@@ -245,14 +258,50 @@
       var tabcontents = document.getElementsByClassName("tab-contents");
 
       function opentab(tabname) {
-        for (tablink of tablinks) {
-          tablink.classlist.remove("active-link");
+        for (var tablink of tablinks) {
+          tablink.classList.remove("active-link");
         }
-        for (tabcontent of tabcontents) {
-          tabcontent.classlist.remove("active-tab");
+        for (var tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
         }
-        event.currentTarget.classlist.add("active-link");
+        event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault();
+        var form = event.target;
+        var data = new FormData(form);
+
+        fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              document.getElementById("success-message").style.display =
+                "block";
+              form.reset();
+            } else {
+              response.json().then((data) => {
+                if (Object.hasOwn(data, "errors")) {
+                  alert(
+                    data["errors"].map((error) => error["message"]).join(", ")
+                  );
+                } else {
+                  alert("Oops! There was a problem submitting your form");
+                }
+              });
+            }
+          })
+          .catch((error) => {
+            alert("Oops! There was a problem submitting your form");
+          });
       }
     </script>
 
@@ -268,3 +317,4 @@
     </script>
   </body>
 </html>
+
